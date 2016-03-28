@@ -1,0 +1,21 @@
+/*
+The goal is to achieve the right rules so that we can do automatic checking in CI/CD. The globals If, Else, and For are
+needed so babel uses the jsx-control-statements in place of those as a loader plugin. The comma-dangle rule enforces
+multiline comma dangles.
+*/
+
+{
+  "extends": ["standard", "standard-react"],
+  "globals": {
+    "If": true,
+    "Else": true,
+    "For": true,
+    "describe": true,
+    "it": true,
+    "expect": true,
+    "beforeEach": true
+  },
+  "rules": {
+    "comma-dangle": [2, "always-multiline"]
+  }
+}
